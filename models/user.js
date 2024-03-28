@@ -34,8 +34,10 @@ const userSchema = new Schema({
     }
 );
 
-// BEGIN: abpxx6d04wxr
 userSchema.virtual('friendCount').get(function() {
     return this.friends.length;
 });
 
+const User = model('User', userSchema);
+
+module.exports = User;
