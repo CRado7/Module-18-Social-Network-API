@@ -19,5 +19,8 @@ router.route('/:id').get(getUserById);
 // POST a new user
 router.route('/').post(createUser);
 
+// DELETE user by ID
+router.route('/:id').delete(deleteUser);
+
 
 module.exports = router;
